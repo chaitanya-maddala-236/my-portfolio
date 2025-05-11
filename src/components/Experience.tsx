@@ -7,25 +7,25 @@ import {
 const Experience = () => {
   const experiences = [
     {
-      title: "Machine Learning Engineer",
-      company: "TechCorp AI",
-      duration: "2023 - Present",
-      description: "Developing and deploying advanced AI models focusing on natural language processing and generative AI. Built a financial analysis system using LlamaIndex and GPT models.",
-      skills: ["LangChain", "LlamaIndex", "PyTorch", "GPT Integration", "Vector Databases"]
+      title: "Generative AI Intern",
+      company: "Skillible",
+      duration: "July 2024 - August 2024",
+      description: "Gained hands-on experience in Generative AI, focusing on understanding the fundamental concepts. Explored various prompting techniques to effectively interact with AI models. Learned about model behaviors and how to optimize inputs for better outputs.",
+      skills: ["Generative AI", "Prompt Engineering", "AI Models", "Collaborative Projects"]
     },
     {
-      title: "AI Research Assistant",
-      company: "Research Institute",
-      duration: "2022 - 2023",
-      description: "Conducted research on medical applications of large language models. Created a prototype medical chatbot that provides accurate information while adhering to medical ethics.",
-      skills: ["Medical NLP", "LLM Fine-tuning", "Healthcare Data Processing", "Python", "Research Methodologies"]
+      title: "Intern",
+      company: "Industech",
+      duration: "Dec 2023 - May 2024",
+      description: "Applied machine learning techniques to develop predictive models using scikit-learn. Assisted in automating workflows, improving operational efficiency across multiple tasks. Gained practical experience in model training and optimization for real-time applications.",
+      skills: ["Machine Learning", "scikit-learn", "Workflow Automation", "Model Optimization"]
     },
     {
-      title: "Data Science Intern",
-      company: "Data Insights Inc",
-      duration: "2021 - 2022",
-      description: "Analyzed large datasets to extract meaningful insights for business decisions. Built predictive models using machine learning algorithms for stock price prediction.",
-      skills: ["Data Analysis", "LSTM Networks", "Time Series Forecasting", "scikit-learn", "Pandas"]
+      title: "Intern",
+      company: "Verzeo",
+      duration: "Sep 2022 - Oct 2022",
+      description: "Worked on data analysis using Python and scikit-learn to develop predictive models. Developed solutions for improving data processing efficiency with MySQL. Contributed to projects that involved handling large datasets and extracting actionable insights.",
+      skills: ["Data Analysis", "Python", "scikit-learn", "MySQL", "Large Datasets"]
     }
   ];
 
