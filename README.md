@@ -6,14 +6,11 @@
 
 A modern, responsive portfolio website showcasing my expertise in AI, Machine Learning, and Software Development. This project demonstrates both my technical skills and design sensibilities through an interactive and visually appealing user interface.
 
-![image](https://github.com/user-attachments/assets/057a9b59-73cb-4f6d-99c4-66ff55d36ce4)
-
-
 ## 🌟 Live Demo
 
 [Visit the Portfolio](https://chaitanyadev.vercel.app/)
 
-![Portfolio Preview](./public/assets/portfolio-preview.png)
+![image](https://github.com/user-attachments/assets/447599a5-8e23-4200-831c-707c5205be90)
 
 ## 📋 Portfolio Overview
 
