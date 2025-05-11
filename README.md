@@ -6,11 +6,24 @@
 
 A modern, responsive portfolio website showcasing my expertise in AI, Machine Learning, and Software Development. This project demonstrates both my technical skills and design sensibilities through an interactive and visually appealing user interface.
 
+![image](https://github.com/user-attachments/assets/057a9b59-73cb-4f6d-99c4-66ff55d36ce4)
+
+
 ## 🌟 Live Demo
 
 [Visit the Portfolio](https://chaitanyadev.vercel.app/)
 
 ![Portfolio Preview](./public/assets/portfolio-preview.png)
+
+## 📋 Portfolio Overview
+
+The portfolio features a sleek, modern design with a dark theme and gradient accents:
+
+- **Navigation**: Clean, intuitive navigation with About, Skills, Experience, Projects, and Contact sections
+- **Hero Section**: Features a gradient-animated name display with the title "AI & MACHINE LEARNING ENGINEER"
+- **Tagline**: "Transforming Data into Intelligent Solutions" 
+- **Call-to-Action Buttons**: "View Projects" and "Contact Me" for easy navigation
+- **Social Links**: Quick access to professional profiles and contact information
 
 ## ✨ Features
 
@@ -169,3 +182,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Email: chaitanyaa.2006@gmail.com
 
 ---
+
