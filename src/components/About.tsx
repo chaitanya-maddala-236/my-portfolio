@@ -37,10 +37,32 @@ const About = () => {
               </p>
             </div>
             
+            {/* Contact & Education */}
+            <div className="mt-6 mb-8">
+              <p className="flex items-center text-muted-foreground">
+                <span className="mr-2">📧</span>
+                <a href="mailto:chaitanyaa.2006@gmail.com" className="hover:text-primary transition-colors">
+                  chaitanyaa.2006@gmail.com
+                </a>
+              </p>
+            </div>
+            
+            {/* Info boxes */}
             <div className="flex flex-wrap gap-4 mt-8">
-              <div className="bg-muted p-4 rounded-md w-full sm:w-48">
-                <h3 className="text-sm text-muted-foreground">Education</h3>
-                <p className="font-medium">Computer Science Engineering</p>
+              <div className="bg-muted p-4 rounded-md w-full">
+                <h3 className="text-sm text-muted-foreground mb-1">Education</h3>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-medium">VNR Vignana Jyothi Institute of Engineering and Technology</p>
+                    <p className="text-sm text-muted-foreground">B.Tech in Artificial Intelligence and Data Science</p>
+                    <p className="text-xs text-muted-foreground">Present</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">Institute of Electronics</p>
+                    <p className="text-sm text-muted-foreground">Diploma in Artificial Intelligence and Machine Learning</p>
+                    <p className="text-xs text-muted-foreground">2021-2024</p>
+                  </div>
+                </div>
               </div>
               <div className="bg-muted p-4 rounded-md w-full sm:w-48">
                 <h3 className="text-sm text-muted-foreground">Experience</h3>
