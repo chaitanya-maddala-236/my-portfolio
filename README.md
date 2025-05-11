@@ -54,12 +54,12 @@ The portfolio features a sleek, modern design with a dark theme and gradient acc
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/chaitanya-maddala-236/ai-master-portfolio-showcase.git
+   git clone https://github.com/chaitanya-maddala-236/my-portfolio
    ```
 
 2. Navigate to the project directory
    ```bash
-   cd ai-master-portfolio-showcase
+   cd my-portfolio
    ```
 
 3. Install dependencies
@@ -81,7 +81,7 @@ The portfolio features a sleek, modern design with a dark theme and gradient acc
 ## 📁 Project Structure
 
 ```
-ai-master-portfolio-showcase/
+my-portfolio/
 ├── components/               # Reusable UI components
 │   ├── layout/               # Layout components (Header, Footer, etc.)
 │   ├── sections/             # Page sections (Hero, About, Projects, etc.)
