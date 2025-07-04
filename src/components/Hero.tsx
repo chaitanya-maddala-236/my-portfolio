@@ -67,7 +67,7 @@ const Hero = () => {
     return () => ctx.revert();
   }, []);
 
-  // Framer Motion variants for the name animation
+  // Fixed Framer Motion variants with proper typing
   const nameVariants = {
     hidden: { 
       opacity: 0,
@@ -80,7 +80,7 @@ const Hero = () => {
       rotateX: 0,
       transition: {
         duration: 1.2,
-        ease: [0.6, 0.01, -0.05, 0.95],
+        ease: "backOut",
         staggerChildren: 0.1
       }
     }
@@ -98,7 +98,7 @@ const Hero = () => {
       rotateX: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, 0.01, -0.05, 0.95]
+        ease: "backOut"
       }
     }
   };
@@ -167,7 +167,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2, ease: [0.6, 0.01, -0.05, 0.95] }}
+            transition={{ duration: 0.8, delay: 2, ease: "backOut" }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25" asChild>
               <a href="#projects">
