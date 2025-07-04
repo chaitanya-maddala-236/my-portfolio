@@ -7,25 +7,69 @@ import {
 const Experience = () => {
   const experiences = [
     {
+      title: "Campus Ambassador",
+      company: "GirlScript Summer of Code",
+      location: "Remote",
+      duration: "June 2025 - October 2025",
+      description: "Promoted open-source culture by organizing info sessions, tech talks, and encouraging student contributions. Acted as a communication bridge between participants and organizers, improving engagement and participation.",
+      highlights: [
+        "Led initiatives to raise awareness of the program, expanding outreach across multiple student communities",
+        "Organized technical workshops and mentorship sessions",
+        "Facilitated community engagement and project collaboration"
+      ],
+      skills: ["Community Management", "Open Source", "Event Organization", "Technical Mentorship"]
+    },
+    {
+      title: "AI Developer Intern",
+      company: "Summer of AI Program",
+      location: "Remote",
+      duration: "July 2025 - August 2025",
+      description: "Developed and deployed AI models in team projects by applying supervised learning pipelines, resulting in functional ML applications. Applied MLOps principles and best practices to streamline model training, deployment, and experimentation.",
+      highlights: [
+        "Received structured mentorship and completed real-world tasks aligned with AI production workflows",
+        "Implemented end-to-end ML pipelines from data preprocessing to model deployment",
+        "Collaborated on cross-functional teams to deliver production-ready AI solutions"
+      ],
+      skills: ["Machine Learning", "MLOps", "Model Deployment", "Supervised Learning", "Team Collaboration"]
+    },
+    {
       title: "Generative AI Intern",
       company: "Skillible",
+      location: "Remote",
       duration: "July 2024 - August 2024",
-      description: "Gained hands-on experience in Generative AI, focusing on understanding the fundamental concepts. Explored various prompting techniques to effectively interact with AI models. Learned about model behaviors and how to optimize inputs for better outputs.",
-      skills: ["Generative AI", "Prompt Engineering", "AI Models", "Collaborative Projects"]
+      description: "Explored foundational concepts in Generative AI and prompting techniques to optimize interaction with language models. Conducted experiments to understand model behaviors and refine input strategies for content generation use cases.",
+      highlights: [
+        "Collaborated on internal AI projects using generation tools, enhancing prompt design and output quality",
+        "Developed expertise in prompt engineering and model optimization techniques",
+        "Contributed to research on AI model behavior and response quality improvement"
+      ],
+      skills: ["Generative AI", "Prompt Engineering", "AI Models", "Content Generation", "Research"]
     },
     {
-      title: "Intern",
+      title: "Machine Learning Intern",
       company: "Industech",
+      location: "Hyderabad, India",
       duration: "Dec 2023 - May 2024",
-      description: "Applied machine learning techniques to develop predictive models using scikit-learn. Assisted in automating workflows, improving operational efficiency across multiple tasks. Gained practical experience in model training and optimization for real-time applications.",
-      skills: ["Machine Learning", "scikit-learn", "Workflow Automation", "Model Optimization"]
+      description: "Built and fine-tuned predictive models using scikit-learn to analyze operational data, enhancing real-time decision making. Automated ETL workflows using Python, reducing data handling time and increasing pipeline efficiency.",
+      highlights: [
+        "Applied model evaluation techniques and feature engineering to improve overall model performance",
+        "Developed automated data processing pipelines that reduced manual work by 60%",
+        "Implemented real-time monitoring systems for model performance tracking"
+      ],
+      skills: ["Machine Learning", "scikit-learn", "Python", "ETL Workflows", "Feature Engineering"]
     },
     {
-      title: "Intern",
+      title: "Data Science Intern",
       company: "Verzeo",
+      location: "Remote",
       duration: "Sep 2022 - Oct 2022",
-      description: "Worked on data analysis using Python and scikit-learn to develop predictive models. Developed solutions for improving data processing efficiency with MySQL. Contributed to projects that involved handling large datasets and extracting actionable insights.",
-      skills: ["Data Analysis", "Python", "scikit-learn", "MySQL", "Large Datasets"]
+      description: "Designed predictive models using Python and scikit-learn to analyze customer behavior patterns from large datasets. Utilized MySQL to optimize queries and improve backend data processing efficiency.",
+      highlights: [
+        "Delivered data-driven insights to project teams by extracting and cleaning raw data for actionable analysis",
+        "Improved database query performance by 40% through optimization techniques",
+        "Created comprehensive data visualizations and reports for stakeholder presentations"
+      ],
+      skills: ["Data Science", "Python", "scikit-learn", "MySQL", "Data Analysis", "Data Visualization"]
     }
   ];
 
@@ -38,7 +82,7 @@ const Experience = () => {
           Professional Experience
         </h2>
         <p className="text-muted-foreground text-center max-w-xl mx-auto mb-16">
-          My journey building AI solutions across different organizations
+          My journey building AI solutions and contributing to open-source communities
         </p>
         
         <div className="relative">
@@ -60,14 +104,29 @@ const Experience = () => {
                       <div className="flex items-center mb-2">
                         <h3 className="text-xl font-bold">{exp.title}</h3>
                       </div>
-                      <div className="flex items-center text-muted-foreground mb-4">
-                        <span className="mr-4">{exp.company}</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center text-muted-foreground mb-4 space-y-1 sm:space-y-0">
+                        <span className="mr-4 font-medium">{exp.company}</span>
+                        <span className="mr-4 text-sm">{exp.location}</span>
                         <div className="flex items-center">
                           <Calendar size={14} className="mr-1" />
-                          <span>{exp.duration}</span>
+                          <span className="text-sm">{exp.duration}</span>
                         </div>
                       </div>
-                      <p className="mb-4">{exp.description}</p>
+                      <p className="mb-4 text-sm leading-relaxed">{exp.description}</p>
+                      
+                      {/* Key highlights */}
+                      <div className="mb-4">
+                        <ul className="space-y-2">
+                          {exp.highlights.map((highlight, highlightIndex) => (
+                            <li key={highlightIndex} className="flex items-start text-sm text-muted-foreground">
+                              <ChevronRight size={14} className="mr-2 mt-0.5 text-primary flex-shrink-0" />
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      {/* Skills */}
                       <div className="flex flex-wrap gap-2 mt-4">
                         {exp.skills.map((skill, skillIndex) => (
                           <span key={skillIndex} className="tech-tag">
