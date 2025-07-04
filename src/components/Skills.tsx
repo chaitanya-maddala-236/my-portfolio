@@ -18,6 +18,7 @@ const Skills = () => {
 
   const technicalSkills = [
     { name: "Python", level: 95 },
+    { name: "JavaScript", level: 85 },
     { name: "TensorFlow", level: 90 },
     { name: "PyTorch", level: 85 },
     { name: "LangChain", level: 90 },
@@ -31,7 +32,7 @@ const Skills = () => {
     {
       title: "Programming Languages",
       icon: <Code />,
-      skills: ["Python", "Java", "SQL", "C/C++"],
+      skills: ["Python", "JavaScript", "Java", "SQL", "C/C++"],
     },
     {
       title: "AI & ML Technologies",

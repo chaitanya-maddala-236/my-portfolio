@@ -11,7 +11,7 @@ const About = () => {
             <div className="relative group">
               <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-primary/40 p-1 transition-all duration-300 group-hover:border-primary/70">
                 <img
-                  src="/lovable-uploads/72b8105f-506c-4cae-9076-e7c19d1b0681.png"
+                  src="/lovable-uploads/726463f4-9bd9-4e51-a09b-f55f94f33787.png"
                   alt="Chaitanya Maddala"
                   className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-105"
                 />
