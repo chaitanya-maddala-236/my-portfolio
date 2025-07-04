@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown, Code, Globe } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +68,7 @@ const Hero = () => {
   }, []);
 
   // Fixed Framer Motion variants with proper typing
-  const nameVariants = {
+  const nameVariants: Variants = {
     hidden: { 
       opacity: 0,
       scale: 0.5,
@@ -80,13 +80,13 @@ const Hero = () => {
       rotateX: 0,
       transition: {
         duration: 1.2,
-        ease: "backOut",
+        ease: [0.68, -0.55, 0.265, 1.55],
         staggerChildren: 0.1
       }
     }
   };
 
-  const letterVariants = {
+  const letterVariants: Variants = {
     hidden: { 
       opacity: 0,
       y: 50,
@@ -98,7 +98,7 @@ const Hero = () => {
       rotateX: 0,
       transition: {
         duration: 0.8,
-        ease: "backOut"
+        ease: [0.68, -0.55, 0.265, 1.55]
       }
     }
   };
@@ -167,7 +167,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2, ease: "backOut" }}
+            transition={{ duration: 0.8, delay: 2, ease: [0.68, -0.55, 0.265, 1.55] }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25" asChild>
               <a href="#projects">
