@@ -1,12 +1,21 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Progress } from "@/components/ui/progress";
 import { 
   Code, Database, Brain, Server, 
   BarChart, GitBranch, Globe, Terminal 
 } from 'lucide-react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const progressBarsRef = useRef<HTMLDivElement>(null);
+  const categoriesRef = useRef<HTMLDivElement>(null);
+
   const technicalSkills = [
     { name: "Python", level: 95 },
     { name: "TensorFlow", level: 90 },
@@ -51,8 +60,46 @@ const Skills = () => {
     },
   ];
 
+  useEffect(() => {
+    // Animate progress bars on scroll
+    gsap.fromTo(progressBarsRef.current?.children || [], 
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: progressBarsRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+        }
+      }
+    );
+
+    // Animate skill categories
+    gsap.fromTo(categoriesRef.current?.children || [], 
+      { opacity: 0, y: 30, scale: 0.9 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.5,
+        stagger: 0.15,
+        ease: "back.out(1.2)",
+        scrollTrigger: {
+          trigger: categoriesRef.current,
+          start: "top 85%",
+          end: "bottom 20%",
+        }
+      }
+    );
+
+  }, []);
+
   return (
-    <section id="skills" className="py-24 relative bg-background">
+    <section ref={skillsRef} id="skills" className="py-24 relative bg-background">
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-background/0 via-muted/5 to-background"></div>
       
       <div className="section-container relative">
@@ -64,7 +111,7 @@ const Skills = () => {
         </p>
         
         <div className="mb-16">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div ref={progressBarsRef} className="grid md:grid-cols-2 gap-8">
             {technicalSkills.map((skill, index) => (
               <div key={index} className="mb-4">
                 <div className="flex justify-between items-center mb-2">
@@ -77,11 +124,11 @@ const Skills = () => {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={categoriesRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-lg p-6 border border-border card-hover"
+              className="bg-card rounded-lg p-6 border border-border card-hover hover:scale-105 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-primary/10 rounded-md text-primary mr-3">
@@ -92,7 +139,7 @@ const Skills = () => {
               
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="tech-tag">
+                  <span key={skillIndex} className="tech-tag hover:bg-primary/20 transition-colors duration-200">
                     {skill}
                   </span>
                 ))}

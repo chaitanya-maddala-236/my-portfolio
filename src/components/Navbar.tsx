@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { Github, Linkedin, Code } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +37,6 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <SocialLink href="https://github.com/chaitanya-maddala-236" icon={<Github size={18} />} />
             <SocialLink href="https://www.linkedin.com/in/chaitanya-maddala236/" icon={<Linkedin size={18} />} />
-            <SocialLink href="https://leetcode.com/u/AI_MASTER/" icon={<Code size={18} />} />
           </div>
         </div>
       </div>

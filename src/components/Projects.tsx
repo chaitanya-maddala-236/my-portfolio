@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
@@ -11,8 +11,14 @@ import {
   ChartLine,
   Bot
 } from 'lucide-react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
+  const projectsRef = useRef<HTMLDivElement>(null);
+
   const projects = [
     {
       title: "Financial Stock Analysis using LlamaIndex",
@@ -64,8 +70,28 @@ const Projects = () => {
     }
   ];
 
+  useEffect(() => {
+    // Animate project cards on scroll
+    gsap.fromTo(projectsRef.current?.querySelectorAll('.project-card') || [], 
+      { opacity: 0, y: 50, scale: 0.9 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "back.out(1.2)",
+        scrollTrigger: {
+          trigger: projectsRef.current,
+          start: "top 70%",
+          end: "bottom 20%",
+        }
+      }
+    );
+  }, []);
+
   return (
-    <section id="projects" className="py-24 relative bg-background">
+    <section ref={projectsRef} id="projects" className="py-24 relative bg-background">
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-background via-muted/5 to-background"></div>
       
       <div className="section-container">
@@ -80,12 +106,12 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-xl overflow-hidden border border-border card-hover flex flex-col"
+              className="project-card bg-card rounded-xl overflow-hidden border border-border card-hover flex flex-col hover:scale-105 transition-all duration-300"
             >
               {/* Project header with icon */}
               <div className="p-6 border-b border-border bg-muted/30">
                 <div className="flex justify-between items-start">
-                  <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                  <div className="p-3 bg-primary/10 rounded-lg text-primary hover:bg-primary/20 transition-colors duration-200">
                     {project.icon}
                   </div>
                   <div className="flex space-x-2">
@@ -93,7 +119,7 @@ const Projects = () => {
                       href={project.githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-2 rounded-md hover:bg-background/80 text-muted-foreground hover:text-foreground transition-colors"
+                      className="p-2 rounded-md hover:bg-background/80 text-muted-foreground hover:text-foreground transition-all duration-200 hover:scale-110"
                     >
                       <Github size={18} />
                     </a>
@@ -101,7 +127,7 @@ const Projects = () => {
                       href={project.liveUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-2 rounded-md hover:bg-background/80 text-muted-foreground hover:text-foreground transition-colors"
+                      className="p-2 rounded-md hover:bg-background/80 text-muted-foreground hover:text-foreground transition-all duration-200 hover:scale-110"
                     >
                       <ExternalLink size={18} />
                     </a>
@@ -116,7 +142,7 @@ const Projects = () => {
                 
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="outline" className="bg-muted/50">{tag}</Badge>
+                    <Badge key={tagIndex} variant="outline" className="bg-muted/50 hover:bg-primary/20 transition-colors duration-200">{tag}</Badge>
                   ))}
                   {project.tags.length > 3 && (
                     <Badge variant="outline" className="bg-muted/50">+{project.tags.length - 3}</Badge>
@@ -128,7 +154,7 @@ const Projects = () => {
         </div>
         
         <div className="flex justify-center mt-12">
-          <Button asChild variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10">
+          <Button asChild variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:scale-105 transition-all duration-200">
             <a href="https://github.com/chaitanya-maddala-236" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2" size={18} />
               View More on GitHub

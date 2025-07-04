@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Code } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -56,7 +56,7 @@ const Footer = () => {
               href="https://github.com/chaitanya-maddala-236" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 bg-muted/30 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+              className="p-2 bg-muted/30 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors hover:scale-110 transition-transform duration-200"
             >
               <Github size={20} />
             </a>
@@ -64,17 +64,9 @@ const Footer = () => {
               href="https://www.linkedin.com/in/chaitanya-maddala236/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 bg-muted/30 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+              className="p-2 bg-muted/30 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors hover:scale-110 transition-transform duration-200"
             >
               <Linkedin size={20} />
-            </a>
-            <a 
-              href="https://leetcode.com/u/AI_MASTER/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-2 bg-muted/30 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
-            >
-              <Code size={20} />
             </a>
           </div>
           
