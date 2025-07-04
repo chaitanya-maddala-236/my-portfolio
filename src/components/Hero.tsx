@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Code, Globe } from 'lucide-react';
@@ -170,13 +169,13 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 2, ease: [0.68, -0.55, 0.265, 1.55] }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/25" asChild>
-              <a href="#projects">
+              <a href="#projects" data-barba-prevent="self">
                 <Code className="mr-2 h-5 w-5" />
                 View Projects
               </a>
             </Button>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-full px-8 py-6 hover:scale-105 transition-all duration-300 backdrop-blur-sm" asChild>
-              <a href="#contact">
+              <a href="#contact" data-barba-prevent="self">
                 <Globe className="mr-2 h-5 w-5" />
                 Contact Me
               </a>
@@ -189,7 +188,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.5 }}
           >
-            <a href="#about" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors group">
+            <a href="#about" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors group" data-barba-prevent="self">
               <span className="mb-2 text-sm group-hover:scale-110 transition-transform">Scroll Down</span>
               <ArrowDown className="animate-bounce group-hover:scale-110 transition-transform" size={20} />
             </a>
