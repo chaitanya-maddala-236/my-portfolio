@@ -24,7 +24,7 @@ const Index = () => {
       <Skills />
       <Experience />
       <Projects />
-      <div className="flex justify-center py-6">
+      <div className="flex justify-center py-2">
         <FloatingButton />
       </div>
       <Contact />
