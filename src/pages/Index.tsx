@@ -24,9 +24,11 @@ const Index = () => {
       <Skills />
       <Experience />
       <Projects />
+      <div className="flex justify-center py-12">
+        <FloatingButton />
+      </div>
       <Contact />
       <Footer />
-      <FloatingButton />
     </div>
   );
 };
