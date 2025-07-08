@@ -8,6 +8,7 @@ import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FloatingButton from '@/components/FloatingButton';
 
 const Index = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Index = () => {
       <Projects />
       <Contact />
       <Footer />
+      <FloatingButton />
     </div>
   );
 };
