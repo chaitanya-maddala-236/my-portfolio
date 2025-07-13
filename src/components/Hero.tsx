@@ -4,6 +4,9 @@ import { ArrowDown, Code, Globe } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, Variants } from 'framer-motion';
+import LottieAnimation from './LottieAnimation';
+import rocketLaunch from '@/assets/animations/rocket-launch.json';
+import loadingDots from '@/assets/animations/loading-dots.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,6 +115,14 @@ const Hero = () => {
       {/* Enhanced gradient orbs with more complex animations */}
       <div className="gradient-orb-1 absolute top-1/4 -left-40 w-96 h-96 bg-gradient-to-r from-tech-purple/30 via-tech-blue/20 to-tech-teal/25 rounded-full blur-3xl"></div>
       <div className="gradient-orb-2 absolute bottom-10 -right-40 w-[500px] h-[500px] bg-gradient-to-l from-tech-blue/25 via-tech-purple/30 to-tech-teal/20 rounded-full blur-3xl"></div>
+      
+      {/* Lottie Animations */}
+      <div className="absolute top-20 right-10 w-24 h-24 opacity-60">
+        <LottieAnimation animationData={rocketLaunch} />
+      </div>
+      <div className="absolute bottom-20 left-10 w-16 h-16 opacity-40">
+        <LottieAnimation animationData={loadingDots} />
+      </div>
       
       {/* Additional floating elements */}
       <div className="absolute top-20 right-20 w-4 h-4 bg-primary/40 rounded-full animate-pulse"></div>

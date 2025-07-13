@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AnimatedIcon from './AnimatedIcon';
+import loadingDots from '@/assets/animations/loading-dots.json';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
