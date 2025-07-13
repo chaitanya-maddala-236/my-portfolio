@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import LottieAnimation from './LottieAnimation';
+import dataAnalysis from '@/assets/animations/data-analysis.json';
+import codingWave from '@/assets/animations/coding-wave.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,6 +100,14 @@ const About = () => {
 
   return (
     <section ref={sectionRef} id="about" className="relative py-24 bg-background/80">
+      {/* Floating Lottie Animations */}
+      <div className="absolute top-20 right-10 w-32 h-32 opacity-30">
+        <LottieAnimation animationData={dataAnalysis} />
+      </div>
+      <div className="absolute bottom-20 left-10 w-24 h-24 opacity-20">
+        <LottieAnimation animationData={codingWave} />
+      </div>
+      
       <div className="section-container">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Profile Image with Enhanced Animation */}
