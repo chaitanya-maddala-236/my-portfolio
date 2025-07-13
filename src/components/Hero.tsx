@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLImageElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -144,22 +144,15 @@ const Hero = () => {
             variants={nameVariants}
             initial="hidden"
             animate="visible"
-            className="perspective-1000"
+            className="perspective-1000 mb-6"
           >
-            <h1 ref={titleRef} className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6">
-              <motion.span className="gradient-heading inline-block">
-                {name.split('').map((char, index) => (
-                  <motion.span
-                    key={index}
-                    variants={letterVariants}
-                    className="inline-block"
-                    style={{ transformOrigin: 'center' }}
-                  >
-                    {char === ' ' ? '\u00A0' : char}
-                  </motion.span>
-                ))}
-              </motion.span>
-            </h1>
+            <motion.img
+              ref={titleRef}
+              src="/lovable-uploads/ef664876-0a5a-4784-84b8-a7cf304da569.png"
+              alt="Chaitanya Maddala"
+              className="h-16 md:h-24 lg:h-32 w-auto mx-auto object-contain hover:scale-105 transition-transform duration-300"
+              variants={letterVariants}
+            />
           </motion.div>
 
           <motion.div
