@@ -49,7 +49,7 @@
 
 @layer components {
   .gradient-heading {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-tech-blue via-tech-purple to-tech-teal bg-clip-text text-transparent;
   }
   
   .section-container {
