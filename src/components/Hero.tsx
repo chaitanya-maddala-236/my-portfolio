@@ -113,8 +113,8 @@ const Hero = () => {
       <div ref={backgroundRef} className="absolute inset-0 bg-neural-pattern opacity-30"></div>
       
       {/* Enhanced gradient orbs with more complex animations */}
-      <div className="gradient-orb-1 absolute top-1/4 -left-40 w-96 h-96 bg-gradient-to-r from-primary/30 via-secondary/20 to-accent/25 rounded-full blur-3xl"></div>
-      <div className="gradient-orb-2 absolute bottom-10 -right-40 w-[500px] h-[500px] bg-gradient-to-l from-secondary/25 via-primary/30 to-accent/20 rounded-full blur-3xl"></div>
+      <div className="gradient-orb-1 absolute top-1/4 -left-40 w-96 h-96 bg-gradient-to-r from-tech-purple/30 via-tech-blue/20 to-tech-teal/25 rounded-full blur-3xl"></div>
+      <div className="gradient-orb-2 absolute bottom-10 -right-40 w-[500px] h-[500px] bg-gradient-to-l from-tech-blue/25 via-tech-purple/30 to-tech-teal/20 rounded-full blur-3xl"></div>
       
       {/* Lottie Animations */}
       <div className="absolute top-20 right-10 w-24 h-24 opacity-60">
