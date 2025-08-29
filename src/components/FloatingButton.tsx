@@ -16,14 +16,14 @@ const FloatingButton = () => {
       
       <Button
         onClick={handleClick}
-        className="relative h-16 w-16 rounded-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group z-10"
-        size="icon"
+        className="relative h-12 px-6 rounded-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group z-10"
       >
         <ExternalLink 
-          size={24} 
-          className="text-white group-hover:rotate-12 transition-transform duration-300" 
+          size={16} 
+          className="text-white group-hover:rotate-12 transition-transform duration-300 mr-2" 
         />
-        <span className="sr-only">Visit external link</span>
+        <span className="text-white font-medium">Resume</span>
+        <span className="sr-only">View Resume</span>
       </Button>
     </div>
   );
