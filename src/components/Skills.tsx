@@ -7,10 +7,6 @@ import {
 } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import AnimatedIcon from './AnimatedIcon';
-import AnimatedSkillBar from './AnimatedSkillBar';
-import loadingDots from '@/assets/animations/loading-dots.json';
-import successCheck from '@/assets/animations/success-check.json';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -118,12 +114,13 @@ const Skills = () => {
         <div className="mb-16">
           <div ref={progressBarsRef} className="grid md:grid-cols-2 gap-8">
             {technicalSkills.map((skill, index) => (
-              <AnimatedSkillBar
-                key={index}
-                skill={skill.name}
-                level={skill.level}
-                delay={index * 0.1}
-              />
+              <div key={index} className="mb-4">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">{skill.name}</span>
+                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                </div>
+                <Progress value={skill.level} className="h-2" />
+              </div>
             ))}
           </div>
         </div>
@@ -135,12 +132,8 @@ const Skills = () => {
               className="bg-card rounded-lg p-6 border border-border card-hover hover:scale-105 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
-                <div className="p-2 bg-primary/10 rounded-md text-primary mr-3 hover:bg-primary/20 transition-colors duration-200">
-                  <AnimatedIcon 
-                    animationData={index % 2 === 0 ? successCheck : loadingDots}
-                    size="sm"
-                    trigger="hover"
-                  />
+                <div className="p-2 bg-primary/10 rounded-md text-primary mr-3">
+                  {category.icon}
                 </div>
                 <h3 className="font-bold text-lg">{category.title}</h3>
               </div>

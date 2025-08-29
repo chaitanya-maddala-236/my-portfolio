@@ -9,8 +9,6 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingButton from '@/components/FloatingButton';
-import FloatingParticles from '@/components/FloatingParticles';
-import rocketLaunch from '@/assets/animations/rocket-launch.json';
 
 const Index = () => {
   useEffect(() => {
@@ -19,15 +17,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background relative">
-      <FloatingParticles animationData={rocketLaunch} count={4} className="opacity-5" />
+    <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
       <About />
       <Skills />
       <Experience />
       <Projects />
-      <div className="flex justify-center py-2">
+      <div className="flex justify-center py-12">
         <FloatingButton />
       </div>
       <Contact />

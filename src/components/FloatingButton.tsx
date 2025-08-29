@@ -1,8 +1,7 @@
 
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import LottieAnimation from './LottieAnimation';
-import successCheck from '@/assets/animations/success-check.json';
 
 const FloatingButton = () => {
   const handleClick = () => {
@@ -17,17 +16,14 @@ const FloatingButton = () => {
       
       <Button
         onClick={handleClick}
-        className="relative px-6 py-3 rounded-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group z-10 text-white font-medium flex items-center gap-2"
+        className="relative h-16 w-16 rounded-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group z-10"
+        size="icon"
       >
-        <div className="w-5 h-5">
-          <LottieAnimation 
-            animationData={successCheck} 
-            width="20px" 
-            height="20px"
-            className="opacity-80"
-          />
-        </div>
-        Resume
+        <ExternalLink 
+          size={24} 
+          className="text-white group-hover:rotate-12 transition-transform duration-300" 
+        />
+        <span className="sr-only">Visit external link</span>
       </Button>
     </div>
   );

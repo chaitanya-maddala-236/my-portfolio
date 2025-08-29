@@ -13,9 +13,6 @@ import {
 } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import LottieAnimation from './LottieAnimation';
-import floatingIcons from '@/assets/animations/floating-icons.json';
-import rocketLaunch from '@/assets/animations/rocket-launch.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,17 +92,6 @@ const Projects = () => {
 
   return (
     <section ref={projectsRef} id="projects" className="py-24 relative bg-background">
-      {/* Floating Lottie Animations */}
-      <div className="absolute top-10 left-10 w-20 h-20 opacity-25">
-        <LottieAnimation animationData={floatingIcons} />
-      </div>
-      <div className="absolute top-1/2 right-10 w-28 h-28 opacity-20">
-        <LottieAnimation animationData={rocketLaunch} />
-      </div>
-      <div className="absolute bottom-20 left-1/4 w-16 h-16 opacity-15">
-        <LottieAnimation animationData={floatingIcons} />
-      </div>
-      
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-background via-muted/5 to-background"></div>
       
       <div className="section-container">

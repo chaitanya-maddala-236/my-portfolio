@@ -4,15 +4,12 @@ import { ArrowDown, Code, Globe } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, Variants } from 'framer-motion';
-import LottieAnimation from './LottieAnimation';
-import rocketLaunch from '@/assets/animations/rocket-launch.json';
-import loadingDots from '@/assets/animations/loading-dots.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLImageElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -116,14 +113,6 @@ const Hero = () => {
       <div className="gradient-orb-1 absolute top-1/4 -left-40 w-96 h-96 bg-gradient-to-r from-tech-purple/30 via-tech-blue/20 to-tech-teal/25 rounded-full blur-3xl"></div>
       <div className="gradient-orb-2 absolute bottom-10 -right-40 w-[500px] h-[500px] bg-gradient-to-l from-tech-blue/25 via-tech-purple/30 to-tech-teal/20 rounded-full blur-3xl"></div>
       
-      {/* Lottie Animations */}
-      <div className="absolute top-20 right-10 w-24 h-24 opacity-60">
-        <LottieAnimation animationData={rocketLaunch} />
-      </div>
-      <div className="absolute bottom-20 left-10 w-16 h-16 opacity-40">
-        <LottieAnimation animationData={loadingDots} />
-      </div>
-      
       {/* Additional floating elements */}
       <div className="absolute top-20 right-20 w-4 h-4 bg-primary/40 rounded-full animate-pulse"></div>
       <div className="absolute bottom-32 left-16 w-6 h-6 bg-secondary/30 rounded-full animate-bounce"></div>
@@ -144,15 +133,22 @@ const Hero = () => {
             variants={nameVariants}
             initial="hidden"
             animate="visible"
-            className="perspective-1000 mb-6"
+            className="perspective-1000"
           >
-            <motion.img
-              ref={titleRef}
-              src="/lovable-uploads/ef664876-0a5a-4784-84b8-a7cf304da569.png"
-              alt="Chaitanya Maddala"
-              className="h-16 md:h-24 lg:h-32 w-auto mx-auto object-contain hover:scale-105 transition-transform duration-300"
-              variants={letterVariants}
-            />
+            <h1 ref={titleRef} className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6">
+              <motion.span className="gradient-heading inline-block">
+                {name.split('').map((char, index) => (
+                  <motion.span
+                    key={index}
+                    variants={letterVariants}
+                    className="inline-block"
+                    style={{ transformOrigin: 'center' }}
+                  >
+                    {char === ' ' ? '\u00A0' : char}
+                  </motion.span>
+                ))}
+              </motion.span>
+            </h1>
           </motion.div>
 
           <motion.div

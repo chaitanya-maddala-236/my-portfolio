@@ -17,10 +17,6 @@ import {
 } from '@/components/ui/form';
 import { toast } from '@/hooks/use-toast';
 import { Mail, MapPin, Send, MessageSquare, ExternalLink } from 'lucide-react';
-import LottieAnimation from './LottieAnimation';
-import FloatingParticles from './FloatingParticles';
-import successCheck from '@/assets/animations/success-check.json';
-import loadingDots from '@/assets/animations/loading-dots.json';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
@@ -59,16 +55,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24 relative bg-background">
-      <FloatingParticles animationData={loadingDots} count={3} className="opacity-10" />
-      
-      {/* Decorative Lottie animations */}
-      <div className="absolute top-10 right-10 w-20 h-20 opacity-20">
-        <LottieAnimation animationData={successCheck} />
-      </div>
-      <div className="absolute bottom-20 left-10 w-24 h-24 opacity-15">
-        <LottieAnimation animationData={loadingDots} />
-      </div>
-      
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-background via-muted/5 to-background"></div>
 
       <div className="section-container">
@@ -84,14 +70,8 @@ const Contact = () => {
           <div className="md:col-span-4 space-y-6">
             <div className="bg-card rounded-xl p-6 border border-border hover:border-primary/20 transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-primary/5">
               <div className="flex items-start">
-                <div className="p-3 bg-primary/10 rounded-md text-primary mr-4 hover:bg-primary/20 transition-colors duration-200">
-                  <div className="w-5 h-5">
-                     <LottieAnimation 
-                       animationData={successCheck} 
-                       width="20px" 
-                       height="20px"
-                     />
-                  </div>
+                <div className="p-3 bg-primary/10 rounded-md text-primary mr-4">
+                  <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Email</h3>
@@ -233,23 +213,12 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    className="bg-primary hover:bg-primary/90 w-full rounded-md transition-all flex items-center justify-center gap-2"
+                    className="bg-primary hover:bg-primary/90 w-full rounded-md transition-all"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
+                    {isSubmitting ? 'Sending...' : (
                       <>
-                        <div className="w-4 h-4">
-                          <LottieAnimation 
-                            animationData={loadingDots} 
-                            width="16px" 
-                            height="16px"
-                          />
-                        </div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="h-4 w-4" />
+                        <Send className="mr-2 h-4 w-4" />
                         Send Message
                       </>
                     )}
