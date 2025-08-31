@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 
 const FloatingButton = () => {
   const handleClick = () => {
-    console.log('FloatingButton clicked - redirecting to:', 'http://bit.ly/45Tx1GN');
-    window.open('http://bit.ly/45Tx1GN', '_blank', 'noopener,noreferrer');
+    console.log('FloatingButton clicked - redirecting to:', 'https://docs.google.com/document/d/1Ejgqjm4yttAopkAhPmlTNQL1-imHLHubdDZfAZzHRwE/edit?usp=drive_link');
+    window.open('https://docs.google.com/document/d/1Ejgqjm4yttAopkAhPmlTNQL1-imHLHubdDZfAZzHRwE/edit?usp=drive_link', '_blank', 'noopener,noreferrer');
   };
 
   return (
