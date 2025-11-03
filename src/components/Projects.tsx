@@ -21,6 +21,30 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "AI-Powered Portfolio Optimization",
+      description: "Unsupervised ML trading system using K-Means clustering to analyze technical indicators across S&P 500 stocks, achieving Sharpe ratio of 1.18 vs benchmark 0.85 with interactive dashboard and automated backtesting.",
+      tags: ["Python", "Scikit-learn", "Machine Learning", "Streamlit", "PCA"],
+      icon: <ChartLine size={28} />,
+      githubUrl: "https://github.com/chaitanya-maddala-236",
+      liveUrl: "https://ai-powered-trading-strategy.streamlit.app/"
+    },
+    {
+      title: "Twitter Sentiment Trading Strategy",
+      description: "Alternative data trading pipeline processing 10,000+ daily sentiment signals with volume-weighted aggregation, achieving 12.4% annual return and 57% win rate through systematic sentiment-based ranking.",
+      tags: ["Python", "NLP", "TextBlob", "Streamlit", "Alternative Data"],
+      icon: <Brain size={28} />,
+      githubUrl: "https://github.com/chaitanya-maddala-236",
+      liveUrl: "https://twitter-sentiment-trading.streamlit.app/"
+    },
+    {
+      title: "Pairs Trading & Statistical Arbitrage",
+      description: "Market-neutral strategy using Engle-Granger cointegration and z-score signals for mean-reverting pairs, achieving profit factor of 1.42 with minimal systematic risk (beta 0.08).",
+      tags: ["Python", "Time Series", "Scipy", "Statsmodels", "Streamlit"],
+      icon: <ChartLine size={28} />,
+      githubUrl: "https://github.com/chaitanya-maddala-236",
+      liveUrl: "https://pairs-trading-strategy.streamlit.app/"
+    },
+    {
       title: "Financial Stock Analysis using LlamaIndex",
       description: "A financial analysis system that uses LlamaIndex to process and analyze stock market data, providing insights and recommendations based on historical trends.",
       tags: ["LlamaIndex", "GPT", "Python", "Financial Analysis", "VectorDB"],
