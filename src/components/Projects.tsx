@@ -68,30 +68,6 @@ const Projects = () => {
       githubUrl: "https://github.com/chaitanya-maddala-236/gan-image-generator",
       liveUrl: "#"
     },
-    {
-      title: "Stock Price Prediction using LSTM",
-      description: "A machine learning model using Long Short-Term Memory networks to predict stock prices based on historical data and market trends.",
-      tags: ["LSTM", "Time Series", "Keras", "Data Visualization", "Financial ML"],
-      icon: <ChartLine size={28} />,
-      githubUrl: "https://github.com/chaitanya-maddala-236/stock-prediction-lstm",
-      liveUrl: "#"
-    },
-    {
-      title: "AI-Based Recommendation System",
-      description: "A personalized recommendation engine using collaborative filtering and content-based approaches to suggest products or content to users.",
-      tags: ["Recommendation Systems", "Python", "scikit-learn", "Matrix Factorization"],
-      icon: <Brain size={28} />,
-      githubUrl: "https://github.com/chaitanya-maddala-236/ai-recommendation",
-      liveUrl: "#"
-    },
-    {
-      title: "Automated Code Documentation Tool",
-      description: "An AI tool that automatically generates code documentation from source code using natural language processing techniques.",
-      tags: ["NLP", "Code Analysis", "GPT", "Developer Tools", "Python"],
-      icon: <FileCode size={28} />,
-      githubUrl: "https://github.com/chaitanya-maddala-236/code-documenter",
-      liveUrl: "#"
-    }
   ];
 
   useEffect(() => {
