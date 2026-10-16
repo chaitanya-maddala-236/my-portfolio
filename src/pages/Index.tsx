@@ -105,34 +105,10 @@ const experience = [
     ],
   },
   {
-    title: "AI Developer Intern",
-    company: "Summer of AI Program",
-    date: "Jul 2025 — Aug 2025",
-    highlights: ["Worked on supervised learning pipelines and team projects, from model preparation through deployment."],
-  },
-  {
-    title: "Campus Ambassador",
-    company: "GirlScript Summer of Code",
-    date: "Jun 2025 — Oct 2025",
-    highlights: ["Supported open-source participation through student outreach, technical events, and community activities."],
-  },
-  {
-    title: "Generative AI Intern",
-    company: "Skillible",
-    date: "Jul 2024 — Aug 2024",
-    highlights: ["Explored generative AI and prompt design through experiments with language-model applications."],
-  },
-  {
     title: "Machine Learning Intern",
     company: "Industech · Hyderabad",
     date: "Dec 2023 — May 2024",
     highlights: ["Built a customer-review classification system in Python and scikit-learn, covering preprocessing, feature engineering, experimentation, and evaluation."],
-  },
-  {
-    title: "Data Science Intern",
-    company: "Verzeo",
-    date: "Sep 2022 — Oct 2022",
-    highlights: ["Used Python, scikit-learn, and MySQL to explore customer data and prepare visual reports."],
   },
 ];
 
