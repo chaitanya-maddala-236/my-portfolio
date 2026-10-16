@@ -7,6 +7,7 @@ import {
   Brain,
   Code2,
   Database,
+  FileText,
   Github,
   GraduationCap,
   Mail,
@@ -85,39 +86,53 @@ const moreProjects = [
 
 const experience = [
   {
-    title: "Campus Ambassador",
-    company: "GirlScript Summer of Code",
-    date: "Jun 2025 — Oct 2025",
-    description:
-      "Supported open-source participation through student outreach, technical events, and community activities.",
+    title: "Agentic AI Intern",
+    company: "Innomatics Research Labs · Hyderabad",
+    date: "Feb 2026 — May 2026",
+    highlights: [
+      "Built asynchronous Python/FastAPI services with modular execution, structured validation, and explicit error handling.",
+      "Debugged failures through structured test cases, log analysis, and failure analysis to isolate root causes.",
+      "Containerized services with Docker and contributed to version-controlled CI/CD workflows; used Claude to accelerate implementation and testing.",
+    ],
+  },
+  {
+    title: "Full Stack Developer Intern",
+    company: "Viswavasu Enterprises · Hyderabad",
+    date: "Jan 2026 — Apr 2026",
+    highlights: [
+      "Built production-facing features with React, Node.js, Python microservices, REST APIs, and PostgreSQL for live student-facing users.",
+      "Resolved API, database, and integration issues through systematic debugging.",
+    ],
   },
   {
     title: "AI Developer Intern",
     company: "Summer of AI Program",
     date: "Jul 2025 — Aug 2025",
-    description:
-      "Worked on supervised learning pipelines and team projects, from model preparation through deployment.",
+    highlights: ["Worked on supervised learning pipelines and team projects, from model preparation through deployment."],
+  },
+  {
+    title: "Campus Ambassador",
+    company: "GirlScript Summer of Code",
+    date: "Jun 2025 — Oct 2025",
+    highlights: ["Supported open-source participation through student outreach, technical events, and community activities."],
   },
   {
     title: "Generative AI Intern",
     company: "Skillible",
     date: "Jul 2024 — Aug 2024",
-    description:
-      "Explored generative AI and prompt design through experiments with language-model applications.",
+    highlights: ["Explored generative AI and prompt design through experiments with language-model applications."],
   },
   {
     title: "Machine Learning Intern",
-    company: "Industech",
+    company: "Industech · Hyderabad",
     date: "Dec 2023 — May 2024",
-    description:
-      "Built predictive models and automated data workflows using Python and scikit-learn.",
+    highlights: ["Built a customer-review classification system in Python and scikit-learn, covering preprocessing, feature engineering, experimentation, and evaluation."],
   },
   {
     title: "Data Science Intern",
     company: "Verzeo",
     date: "Sep 2022 — Oct 2022",
-    description:
-      "Used Python, scikit-learn, and MySQL to explore customer data and prepare visual reports.",
+    highlights: ["Used Python, scikit-learn, and MySQL to explore customer data and prepare visual reports."],
   },
 ];
 
@@ -235,6 +250,7 @@ const Index = () => {
             <div className="hero__actions">
               <a className="button button--dark" href="#work">Explore my work <ArrowDownRight size={18} /></a>
               <a className="text-link" href="mailto:chaitanyaa.2006@gmail.com">Get in touch <ArrowUpRight size={17} /></a>
+              <a className="text-link" href="https://drive.google.com/file/d/1fp53dN9V-Q5BGrCXyDHCPWxg7j0i1t-2/view?usp=sharing" target="_blank" rel="noreferrer">View résumé <FileText size={16} /></a>
             </div>
             <div className="hero__note"><MapPin size={15} /> Curious about AI, product, and the space between.</div>
           </div>
@@ -367,7 +383,9 @@ const Index = () => {
               <article className="journey-item" key={role.company + role.title}>
                 <span className="journey-item__index">0{index + 1}</span>
                 <div className="journey-item__role"><h3>{role.title}</h3><p>{role.company}</p></div>
-                <p className="journey-item__description">{role.description}</p>
+                <ul className="journey-item__highlights">
+                  {role.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                </ul>
                 <span className="journey-item__date">{role.date}</span>
               </article>
             ))}
@@ -386,6 +404,7 @@ const Index = () => {
           </div>
           <div className="contact__links">
             <a href="mailto:chaitanyaa.2006@gmail.com">chaitanyaa.2006@gmail.com <ArrowUpRight size={16} /></a>
+            <a href="https://drive.google.com/file/d/1fp53dN9V-Q5BGrCXyDHCPWxg7j0i1t-2/view?usp=sharing" target="_blank" rel="noreferrer">Résumé (PDF) <ArrowUpRight size={16} /></a>
             <a href="https://www.linkedin.com/in/chaitanya-maddala236/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={16} /></a>
             <a href="https://github.com/chaitanya-maddala-236" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={16} /></a>
             <a href="https://leetcode.com/u/AI_MASTER/" target="_blank" rel="noreferrer">LeetCode <ArrowUpRight size={16} /></a>

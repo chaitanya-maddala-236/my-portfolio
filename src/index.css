@@ -1140,7 +1140,7 @@ a:focus-visible {
   min-height: 112px;
   grid-template-columns: 54px 0.86fr 1.1fr 147px;
   padding: 21px 0;
-  align-items: center;
+  align-items: start;
   gap: 26px;
   border-bottom: 1px solid var(--line);
 }
@@ -1157,11 +1157,30 @@ a:focus-visible {
 }
 
 .journey-item__role p,
-.journey-item__description {
+.journey-item__highlights {
   margin: 0;
   color: #66675e;
   font-size: 11px;
   line-height: 1.6;
+}
+
+.journey-item__highlights {
+  display: grid;
+  gap: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.journey-item__highlights li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.journey-item__highlights li::before {
+  position: absolute;
+  left: 0;
+  color: #ed6839;
+  content: "↳";
 }
 
 .journey-item__date {
@@ -1554,7 +1573,7 @@ a:focus-visible {
     font-size: 15px;
   }
 
-  .journey-item__description {
+  .journey-item__highlights {
     grid-column: 2 / 4;
     grid-row: 2;
     max-width: 410px;
@@ -1652,7 +1671,7 @@ a:focus-visible {
     justify-self: start;
   }
 
-  .journey-item__description {
+  .journey-item__highlights {
     grid-column: 2;
     grid-row: 3;
   }
